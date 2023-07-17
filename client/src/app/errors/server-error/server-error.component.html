@@ -1,0 +1,15 @@
+<h4>Internal Server Error- refreshing the page make the error disapear</h4>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error: {{error.message}}</h5>
+    <p class class="font-weight-bold">Note: If youe seeing this angular is blame this?</p>
+    <p>what to do next?</p>
+    <ol>
+        <li>Open chrome dev tool- Then check the failling request in network Tab</li>
+        <li>Examine request URL and API endpont</li>
+        <li>Reproduce the error in POstman - if you get same error </li>
+    </ol>
+    <p style="font-weight: bold;"> Follwing is the Track stress - First few line will tell you eeeor details</p>
+    <code class="mt-5" style="background-color: whitesmoke;">
+       {{error.details}}
+    </code>
+</ng-container>
